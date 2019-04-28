@@ -48,20 +48,20 @@
 <a class="nav-link" href="#home">Home</a>
         </li>
 
-<!--nav item -reservation- -->
-    <li class="nav-item">
-<a class="nav-link" href="#reservation">Reservation</a>
-    </li>
-
- <!--nav item -clubs- -->
-    <li class="nav-item">
-<a class="nav-link" href="#clubs">Clubs</a>
-    </li>
+        <!--nav item -clubs- -->
+        <li class="nav-item">
+          <a class="nav-link" href="#clubs">Clubs</a>
+        </li>
 
  <!--nav item -events- -->
     <li class="nav-item">
 <a class="nav-link" href="#events">Events</a>
     </li>
+
+    <!--nav item -reservation- -->
+        <li class="nav-item">
+    <a class="nav-link" href="#reservation">Reservation</a>
+        </li>
 
  <!-- nav item -about- -->
     <li class="nav-item">
@@ -72,6 +72,7 @@
     <li class="nav-item">
 <a class="nav-link" href="#contact">Contact</a>
     </li>
+
         </ul>
       </div>
     </div>
@@ -89,54 +90,6 @@
   </div>
   <!-- container fluid-->
 
-  <!-- Header -->
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
-        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-<!--   <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a> -->
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <span class="copyright">&copy; - BNC -</span>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms of Use</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-      </div>
-    </div>
-  </header>
 
   <!-- Clients -->
   <section class="py-5">
@@ -189,7 +142,7 @@
     var app = $.spapp({pageNotFound: 'error_404'});
 
     app.route({view: 'home', load: 'home.html' });
-    app.route({view: 'reservation', load: 'reservation.html' });
+    app.route({view: 'reservation', load: 'reservation.php' });
     app.route({view: 'clubs', load: 'clubs.html' });
     app.route({view: 'events', load: 'events.html' });
     app.route({view: 'about', load: 'about.html' });
