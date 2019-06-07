@@ -68,8 +68,8 @@
 <a class="nav-link" href="#about">About</a>
     </li>
 
- <!-- nav item -contact- -->
-    <li class="nav-item">
+<!-- nav item -contact- -->
+     <li class="nav-item">
 <a class="nav-link" href="#contact">Contact</a>
     </li>
 
@@ -81,13 +81,13 @@
   <!-- page content -->
   <div class="container-fluid">
     <main id="spapp" role="main">
-      <section id="home"></section>
       <section id="reservation"></section>
       <section id="clubs"></section>
       <section id="events"></section>
       <section id="about"></section>
       <section id="contact"></section>
-  </div>
+      <section id="home"></section>
+    </div>
   <!-- container fluid-->
 
 
@@ -96,22 +96,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="#home">
             <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="#home">
             <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="#home">
             <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="#home">
             <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
           </a>
         </div>
@@ -127,9 +127,7 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
@@ -137,15 +135,19 @@
   <!--spapp-->
   <script src="spapp/js/jquery.spapp.min.js"></script>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="//malsup.github.com/jquery.form.js"></script>
+
  <script>
   $(document).ready(function(){
     var app = $.spapp({pageNotFound: 'error_404'});
 
-    app.route({view: 'home', load: 'home.html' });
-    app.route({view: 'reservation', load: 'reservation.php' });
+    app.route({view: 'reservation', load: 'reservation.html' });
     app.route({view: 'clubs', load: 'clubs.html' });
     app.route({view: 'events', load: 'events.html' });
     app.route({view: 'about', load: 'about.html' });
+    app.route({view: 'home', load: 'home.html' });
     app.route({view: 'contact', load: 'contact.html' });
 
   app.run();

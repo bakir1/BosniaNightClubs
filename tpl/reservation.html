@@ -1,0 +1,86 @@
+
+<center>
+    <h1>Please fill Reservation</h1>
+</center>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <form id="toDoForm" action="rest/add" method="post">
+           <div class="form-group">
+               <label for="club">*In first row choose which club you want to reserved</label>
+               <select name="club" class="form-control">
+                   <option>Choose Club</option>
+                   <option value="club A">A Club </option>
+                   <option value="club B">B Club </option>
+                   <option value="club C">C Club </option>
+                   <option value="club D">D Club </option>
+                   <option value="club E">E Club </option>
+                   <option value="club F">F Club </option>
+               </select>
+           </div>
+           <div class="form-group">
+               <input type="text" class="form-control" name="name" placeholder="Input Full Name" required>
+           </div>
+           <div class="form-group">
+               <input type="email" class="form-control" name="email" placeholder="Insert E-mail">
+           </div>
+           <div class="form-group">
+               <input type="number" class="form-control" name="phone" placeholder="Insert Phone Number" required>
+           </div>
+           <div class="form-group">
+               <input type="date" class="form-control" name="date" required>
+           </div>
+           <div class="form-group">
+               <input type="number" class="form-control" name="guest" placeholder="Insert Number of Guest" required>
+           </div>
+           <div class="form-group" required>
+               <label for="club">*choose which section you want to reserved</label>
+               <select name="section" class="form-control">
+                   <option value="--">Choose Section Request</option>
+                   <option value="ViP">VIP Section</option>
+                   <option value="CentralZone">Central zone</option>
+                   <option value="other">Other</option>
+               </select>
+           </div>
+           <button type="submit" class="btn btn-warning">Submit</button>
+       </form>
+          </div>
+        </div>
+
+
+<script>
+  /*rules: {
+    name: {
+      minlength: 3,
+      maxlength: 50
+    }
+  },
+  messages: {
+    name: {
+      required: "Enter name",
+      minlength: "Minimum length is 3",
+      maxlength: "Maximum length is 50"
+    }
+  },*/
+    /*
+    if (confirm('Are you sure about your reservation?')){
+        console.log(form);
+      $.post('rest/add', $('#toDoForm').serialize(), function(data){
+        alert('Reservation is done.');
+        $('#toDoForm').trigger('reset');
+      });
+      return false;
+    }else{
+      alert('Error');
+    }*/
+
+    $("#toDoForm").validate({
+      submitHandler: function(form) {
+    $('#toDoForm').ajaxSubmit(function(){
+      alert('Reservation is done.');
+      $('#toDoForm').trigger('reset');
+    });
+  }
+});
+
+</script>
