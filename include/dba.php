@@ -1,5 +1,5 @@
 <?php
-  class db{
+  class dba{
     private $dbhost = 'localhost';
     private $dbuser = 'root';
     private $dbpass = '';

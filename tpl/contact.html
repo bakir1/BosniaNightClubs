@@ -9,20 +9,20 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-<form id="contactForm" action="rest/add" method="post">
+<form id="contactForm" action="include/add" method="post">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-<input type="text" class="form-control" name="name" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
+               <input type="text" class="form-control" name="name" placeholder="Input Full Name" required>
+                <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-<input type="email" class="form-control" name="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
+               <input type="email" class="form-control" name="email" placeholder="Insert E-mail">
+                <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-<input type="number" class="form-control" name="phone" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
+ <input type="number" class="form-control" name="phone" placeholder="Insert Phone Number" required>
+                 <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -34,7 +34,7 @@
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-<button type="submit" class="btn btn-primary btn-xl text-uppercase">Send Message</button>
+                <button type="submit" class="btn btn-warning">Submit</button>
               </div>
             </div>
           </form>
@@ -46,3 +46,15 @@
   <!-- Contact form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+
+<script>
+    $("#contactForm").validate({
+    submitHandler: function(form) {
+  $('#contactForm').ajaxSubmit(function(){
+    alert('Thank you for contact us.');
+    $('#contactForm').trigger('reset');
+  });
+}
+});
+
+</script>

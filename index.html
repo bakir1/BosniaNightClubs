@@ -73,6 +73,11 @@
 <a class="nav-link" href="#contact">Contact</a>
     </li>
 
+    <li class="nav-item">
+<a class="nav-link" href="#login">Login</a>
+   </li>
+
+
         </ul>
       </div>
     </div>
@@ -86,6 +91,7 @@
       <section id="events"></section>
       <section id="about"></section>
       <section id="contact"></section>
+      <section id="login"></section>
       <section id="home"></section>
     </div>
   <!-- container fluid-->
@@ -148,6 +154,7 @@
     app.route({view: 'events', load: 'events.html' });
     app.route({view: 'about', load: 'about.html' });
     app.route({view: 'contact', load: 'contact.html' });
+    app.route({view: 'login', load: 'login.html' });
     app.route({view: 'home', load: 'home.html' });
 
   app.run();
